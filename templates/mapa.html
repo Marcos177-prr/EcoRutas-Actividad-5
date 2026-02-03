@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="relative min-h-screen pt-24 pb-10 px-4 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1920" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/70"></div>
+    </div>
+
+    <div class="relative z-10 container mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <div class="lg:col-span-1 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 flex flex-col h-[600px] shadow-2xl">
+            <div class="p-5 border-b border-white/10">
+                <h2 class="text-white font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-list-check text-green-400"></i> RUTAS GUARDADAS
+                </h2>
+            </div>
+            <div id="lista-lugares" class="p-4 overflow-y-auto flex-grow space-y-3">
+                <p id="mensaje-vacio" class="text-stone-400 text-sm italic text-center py-10">Haz clic en el mapa para marcar un punto.</p>
+            </div>
+        </div>
+
+        <div class="lg:col-span-3">
+            <div id="map" class="h-[600px] rounded-2xl shadow-2xl border border-white/20"></div>
+            
+            <div id="spinner" class="hidden absolute inset-0 bg-black/50 backdrop-blur-sm z-[1000] flex items-center justify-center rounded-2xl">
+                <i class="fa-solid fa-circle-notch fa-spin text-4xl text-green-400"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/map_logic.js') }}"></script>
+{% endblock %}

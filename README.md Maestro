@@ -1,0 +1,58 @@
+Markdown
+# 🌿 EcoRutas - Explora lo inexplorado
+
+EcoRutas es una plataforma interactiva diseñada para aventureros y senderistas que buscan registrar puntos clave en rutas de difícil acceso en Ensenada, B.C.
+
+## 🚀 Cómo correr el proyecto localmente
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone 
+Instalar dependencias:
+
+Bash
+pip install flask flask-cors
+Ejecutar la aplicación:
+
+Bash
+python app.py
+Abre tu navegador en http://127.0.0.1:5000
+
+🛠️ Stack Tecnológico
+Backend: Flask (Python) para la gestión de rutas y persistencia de datos.
+
+Frontend: HTML5, CSS3 con Tailwind CSS (estilo Glassmorphism).
+
+Mapas: Leaflet.js con capas de Stadia Maps y OpenStreetMap.
+
+Iconografía: FontAwesome 6.
+
+🎨 Justificación de Diseño
+La interfaz se basó en una jerarquía visual oscura para reducir la fatiga ocular durante el uso nocturno o en exteriores. Se implementó un panel lateral con Glassmorphism (transparencia con desenfoque) para mantener la conexión visual con el mapa de fondo, optimizando el espacio y permitiendo una navegación fluida entre los puntos registrados sin perder el contexto geográfico.
+
+🤖 Créditos a la IA
+Este código fue co-creado con Gemini Canvas.
+
+Prompt principal: "Crea un mapa interactivo con Leaflet y Flask que permita guardar puntos en una lista lateral sin recargar la página, usando un diseño oscuro inspirado en senderismo y un contador único para cada lugar."
+
+## 3. Subir a GitHub (Pasos exactos)
+Abre tu terminal en la carpeta del proyecto y ejecuta estos comandos:
+
+1.  **Añadir cambios:** `git add .`
+2.  **Commit:** `git commit -m "Final: Integración de mapa y landing page con diseño oscuro"`
+3.  **Subir:** `git push origin main` (o `master`)
+
+---
+
+## 4. Despliegue en PythonAnywhere
+Para que tu mapa funcione en la nube, sigue este resumen:
+
+1.  **Sube tu código:** En la pestaña "Files" de PythonAnywhere, sube tu carpeta o usa la consola para clonar tu GitHub.
+2.  **Crea el Web App:** Ve a la pestaña "Web", dale a "Add a new web app" y elige **Flask** con tu versión de Python.
+3.  **Configura el WSGI:** Asegúrate de que el archivo `wsgi.py` apunte correctamente a tu `app.py`.
+4.  **Activa HTTPS:** En la misma pestaña "Web", busca la sección **"HTTPS"** y actívala (es obligatorio para que Leaflet y el GPS carguen correctamente).
+
+---
+
+### ¿Te gustaría que te genere el archivo `requirements.txt`?
+Este archivo es fundamental para que PythonAnywhere sepa qué instalar automáticamente. **¿Q

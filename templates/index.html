@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block content %}
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+                 alt="Fondo Montañas" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-3xl">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 drop-shadow-lg">
+                Tu Próxima Aventura <br> <span class="text-green-400">Comienza Aquí</span>
+            </h1>
+            <p class="text-xl text-stone-200 mb-10 font-light">
+                Descubre senderos que no aparecen en los mapas tradicionales. 
+                Rutas seguras, topografía detallada y comunidad off-road.
+            </p>
+            
+            <a href="/mapa" class="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-green-600 rounded-full hover:bg-green-700 hover:scale-105 shadow-xl shadow-green-900/20">
+                <span>Explorar Mapa</span>
+                <i class="fa-solid fa-compass ml-3 group-hover:rotate-45 transition-transform duration-300"></i>
+            </a>
+        </div>
+    </header>
+
+    <section class="py-24 px-6 bg-[#0a0f1a] relative overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-green-900/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">
+            
+            <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all group">
+                <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6 text-green-400 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-map-location-dot text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Rutas Offline</h3>
+                <p class="text-stone-400 leading-relaxed">No necesitas señal. Descarga topografía detallada y navega sin límites en cualquier terreno.</p>
+            </div>
+
+            <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all group">
+                <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6 text-green-400 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-shoe-prints text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Senderos Reales</h3>
+                <p class="text-stone-400 leading-relaxed">Caminos verificados por expertos. Olvídate de las rutas cerradas o inexistentes.</p>
+            </div>
+
+            <div class="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all group">
+                <div class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6 text-green-400 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-shield-halved text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Seguridad</h3>
+                <p class="text-stone-400 leading-relaxed">Alertas en tiempo real y puntos de auxilio. Tu integridad es nuestra prioridad número uno.</p>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}
